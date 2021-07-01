@@ -27,8 +27,17 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="./css/main.css">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js" integrity="sha512-2fk3Q4NXPYAqIha0glLZ2nluueK43aNoxvijPf53+DgL7UW9mkN+uXc1aEmnZdkkZVvtJZltpRt+JqTWc3TS3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
+        integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"
+        integrity="sha512-2fk3Q4NXPYAqIha0glLZ2nluueK43aNoxvijPf53+DgL7UW9mkN+uXc1aEmnZdkkZVvtJZltpRt+JqTWc3TS3Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- SW IPER -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
     <script defer src="./js/main.js"></script>
 </head>
 
@@ -363,7 +372,7 @@
     <section class="visual">
         <div class="inner">
             <div class="title fade-in">
-                <img src="./images/visual_title.png" alt="STARBUCKS DELIGHFUL START TO THE YEARS"/>
+                <img src="./images/visual_title.png" alt="STARBUCKS DELIGHFUL START TO THE YEARS" />
                 <a href="javascript:void(0)" class="btn btn--brown">자세히 보기</a>
             </div>
             <div class="fade-in">
@@ -388,7 +397,22 @@
             <div class="inner">
                 <div class="inner__left">
                     <h2>공지사항</h2>
-                    <div class="swiper-container"></div>
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="javascript:void(0)">시스템 개선 및 점검 안내</a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="javascript:void(0)">SSG PAY 시스템 점검 안내</a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="javascript:void(0)">Gift 배송하기 서비스 오픈에 따른 이용약관 개정 안내</a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="javascript:void(0)">이브닝 페어링 프로그램 종료 안내</a>
+                            </div>
+                        </div>
+                    </div>
                     <a href="javascript:void(0)" class="notice-line__more">
                         <div class="material-icons">add_circle</div>
                     </a>
@@ -399,6 +423,52 @@
                         <div class="material-icons">upload</div>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div class="promotion">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./images/promotion_slide1.jpg" alt="2021 뉴이어, 스타벅스와 함께 즐겁고 활기차게 시작하세요!" />
+                        <a href="javascript:void(0)" class="btn">자세히 보기</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/promotion_slide2.jpg" alt="2021 뉴이어, 스타벅스와 함께 즐겁고 활기차게 시작하세요!" />
+                        <a href="javascript:void(0)" class="btn">자세히 보기</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/promotion_slide3.jpg" alt="2021 뉴이어, 스타벅스와 함께 즐겁고 활기차게 시작하세요!" />
+                        <a href="javascript:void(0)" class="btn">자세히 보기</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/promotion_slide4.jpg" alt="2021 뉴이어, 스타벅스와 함께 즐겁고 활기차게 시작하세요!" />
+                        <a href="javascript:void(0)" class="btn">자세히 보기</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/promotion_slide5.jpg" alt="2021 뉴이어, 스타벅스와 함께 즐겁고 활기차게 시작하세요!" />
+                        <a href="javascript:void(0)" class="btn">자세히 보기</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-prev">
+                <div class="material-icons">arrow_back</div>
+            </div>
+            <div class="swiper-next">
+                <div class="material-icons">arrow_forward</div>
+            </div>
+        </div>
+    </section>
+    <!-- REWARDS -->
+    <section class="rewards">
+        <div class="bg-left"></div>
+        <div class="bg-right"></div>
+        <div class="inner">
+            <div class="btn-group">
+                <div class="btn btn--reverse sign-up">회원가입</div>
+                <div class="btn sign-in">로그인</div>
+                <div class="btn gift">e-Gift 선물하기</div>
             </div>
         </div>
     </section>

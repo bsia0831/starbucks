@@ -44,3 +44,43 @@ fadeEls.forEach(function (fadeEls, index) {
         opacity: 1
     });
 });
+
+// new Swiper(선택자, 옵션)
+new Swiper('.notice-line .swiper-container', {
+    direction: 'vertical',
+    autoplay: true, 
+    loop: true
+});
+
+new Swiper('.promotion .swiper-container', {
+    // direction: 'horizontal',
+    slidesPerView: 3,
+    spaceBetween: 10,
+    centeredSlides: true,
+    loop: true,
+    autoplay: {
+        delay: 3000
+    },
+    pagination: {
+        el: '.promotion .swiper-pagination', 
+        clickable: true
+    },
+    navigation: {
+        prevEl: '.promotion .swiper-prev',
+        nextEl: '.promotion .swiper-next'
+    }
+});
+
+const promotionEl = document.querySelector('.promotion');
+const promotionToggleBtn = document.querySelector('.toggle-promotion');
+let isHidePromotion = false;
+promotionToggleBtn.addEventListener('click', function() {
+    isHidePromotion = !isHidePromotion
+    if (isHidePromotion){
+        // 숨김처리
+        promotionEl.classList.add('hide');
+    } else{
+        // 보임처리
+        promotionEl.classList.remove('hide');
+    }
+});
