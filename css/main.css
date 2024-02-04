@@ -73,6 +73,21 @@ img {
     background-color: #FFF;
 }
 
+.back-to-position{
+    opacity: 0;
+    transition: 1s;
+}
+.back-to-position.to-right{
+    transform: translateX(-150px);
+}
+.back-to-position.to-left{
+    transform: translateX(150px);
+}
+.show{
+    opacity: 1;
+    transform: translateX(0);
+}
+
 /*BACK TO POSITION*/
 .back-to-position {
     opacity: 0;
@@ -618,10 +633,6 @@ header .badges .badge {
     margin-bottom: 15px;
 }
 
-.season-product .text-group .more{
-    
-}
-
 /* RESERVE COFFEE */
 .reserve-coffee{
     background-image: url("../images/reserve_bg.jpg");
@@ -681,4 +692,95 @@ header .badges .badge {
 
 .reserve-store .inner{
     height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reserve-store .medal{
+    width: 334px;
+    height: 334px;
+    perspective: 600px;
+
+}
+.reserve-store .medal .front,
+.reserve-store .medal .back{
+    position: absolute;
+    width: 334px;
+    height: 334px;
+    backface-visibility: hidden;
+    transition: 1s;
+}
+
+.reserve-store .medal .front{
+    transform: rotateY(0deg);
+}
+.reserve-store .medal:hover .front{
+    transform: rotateY(180deg);
+}
+
+.reserve-store .medal .back{
+    transform: rotateY(-180deg);
+}
+.reserve-store .medal:hover .back{
+    transform: rotateY(0deg);
+}
+.reserve-store .medal .back .btn{
+    position: absolute;
+    top: 240px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+/* FIND STORE */
+.find-store{
+    background-image: url("../images/find_store_bg.jpg");
+}
+
+.find-store .inner{
+    height: 400px;
+}
+
+.find-store .texture1{
+    position: absolute;
+    top: 0;
+    left: 400px;
+}
+
+.find-store .texture2{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.find-store .picture{
+    border-radius: 50%;
+    box-shadow: 2px 2px 8px rgba(0,0,0,.5);
+    position: absolute;
+}
+
+.find-store .picture1{
+    top: -60px;
+    left: 0;
+}
+
+.find-store .picture2{
+    top: 150px;
+    left: 250px;
+}
+
+.find-store .text-group{
+    position: absolute;
+    top: 120px;
+    left: 550px;
+
+}
+
+.find-store .text-group .title{
+    margin-bottom: 20px;
+
+}
+.find-store .text-group .description{
+    margin-bottom: 20px;
 }
